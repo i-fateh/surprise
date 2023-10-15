@@ -56,14 +56,14 @@ img {
 }
 
 input[type='range'] {
+    position: absolute; right: -35vw; top:40vh;
+    transform: rotate(-90deg); z-index: 99;
     -webkit-appearance: none;
     border-radius: 8px;
     border: 1px solid #bdc3c7;
     background-color: #bdc3c7;
     outline: none !important;
-    outline: 0;
     -webkit-tap-highlight-color: none;
-    border-radius: 0px;
     height: 30px;
     width: 90vw;
     border-radius: 10px;
@@ -93,3 +93,60 @@ input[type='range'] {
   input[type="range"]::-ms-fill-upper {  
     background-color: #9a905d;
   }
+
+
+  @media only screen and (min-width : 1024px){
+    /* Styles pour cette Media Queries */
+
+    html, body {
+        justify-content: center;
+    }
+
+    .container {
+        width: auto;
+        height: 600px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    img {
+        width: auto;
+        height: 600px;
+        object-fit: cover;
+    }
+    
+    #myChoice{
+        margin: 2rem auto;
+    } 
+    
+    #blurry {
+        z-index: 99;
+        position: absolute;
+        height: 600px;
+        border-radius: 30px;
+        backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(100px);
+    }
+
+
+
+    input[type='range'] {
+        position: relative;
+        left: 0px; right: 0px; top: 0px;
+        transform: rotate(0deg); z-index: 99;
+
+        -webkit-appearance: none;
+        border-radius: 8px;
+        border: 1px solid #bdc3c7;
+        background-color: #bdc3c7;
+        outline: none !important;
+        -webkit-tap-highlight-color: none;
+        height: 30px;
+        width: 60vw;
+        border-radius: 10px;
+    }
+
+    }
